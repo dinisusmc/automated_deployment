@@ -1,4 +1,5 @@
-gcloud compute firewall-rules create open_http --allow tcp:80
+gcloud compute firewall-rules create open-5000 --allow tcp:5000
 gcloud compute instances create automato \
-  --metadata-from-file=startup-script=./start.sh
+    --zone=us-east4-c \
+    --metadata-from-file=startup-script=./start.sh
 
